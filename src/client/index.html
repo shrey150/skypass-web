@@ -2,17 +2,27 @@
 <html>
     <head>
         <title>Skypass</title>
-        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
+        <!--link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" /-->
+        <link rel="stylesheet" href="bootstrap.css" />
     </head>
     <body>
-        <div class="container">
-            <h1>Skypass</h1>
-            <h3>Get notifications for your Skyward assignments</h3>
-            <form>
-                <input type="text" class="input-group" />
-                <button class="btn btn-primary">Test</button>
-            </form>
+        <div class="container-fluid">
+            <div class="jumbotron">
+                <h1>Skypass</h1>
+                <h5>Get notifications for your Skyward assignments</h5>
+            </div>
             
+            <form>
+                <div class="form-group">
+                    <label>Skyward username</label>
+                    <input type="text" class="form-control" name="username"/>
+    
+                    <label>Skyward password</label>
+                    <input type="password" class="form-control" name="password">
+                    <small class="form-text text-muted">Don't worry, your password will be safely encrypted.</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign up for emails</button>
+            </form>
         </div>
     </body>
 </html>
