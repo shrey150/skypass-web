@@ -1,14 +1,11 @@
 const express       = require("express");
 const bodyParser    = require("body-parser");
-
-const constants     = require("./constants");
+const env           = require("./env");
 const NodeRSA       = require("node-rsa");
-
 const admin         = require("firebase-admin");
-const serviceAcc    = require("./adminsdk.json");
 
 admin.initializeApp({
-    credential: admin.credential.cert(serviceAcc),
+    credential: admin.credential.cert(env.ADMIN_SDK),
     databaseURL: "https://skyward-app.firebaseio.com"
 });
 
@@ -17,9 +14,9 @@ const auth = admin.auth();
 const app = express();
 
 const passwordNode = new NodeRSA();
-passwordNode.importKey(constants.PUBLIC_KEY, "pkcs8-public");
+passwordNode.importKey(env.PUBLIC_KEY, "pkcs8-public");
 
-app.use(express.static(constants.CLIENT_ROOT));
+app.use(express.static(env.CLIENT_ROOT));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post("/", (req, res) => {
