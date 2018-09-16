@@ -4,7 +4,7 @@
   "description": "Web interface for Skypass notifications",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/server/index.js",
+    "start": "node src/server/index.js",
     "start_home": "run.bat",
     "start_school": "C:/Users/spandya21/Downloads/app/node src/server/index.js"
   },
