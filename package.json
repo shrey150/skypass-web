@@ -1,16 +1,20 @@
 {
-  "name": "reactnative",
+  "name": "skypass-web",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web interface for Skypass notifications",
   "main": "index.js",
   "scripts": {
-    "start": "C:/Users/spandya21/Downloads/app/node src/server/index.js"
+    "start": "nodemon src/server/index.js",
+    "start_home": "run.bat",
+    "start_school": "C:/Users/spandya21/Downloads/app/node src/server/index.js"
   },
   "author": "Shrey Pandya",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.1.3",
-    "express": "^4.16.3"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "firebase-admin": "^6.0.0",
+    "node-rsa": "^1.0.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"

@@ -1,1 +1,4 @@
 node_modules
+rsa_keys.txt
+run.bat
+src/server/adminsdk.json

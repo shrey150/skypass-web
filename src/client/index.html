@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>Skypass</title>
-        <!--link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" /-->
-        <link rel="stylesheet" href="bootstrap.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="images/favicon.ico" />
     </head>
-    <body>
-        <div class="container-fluid">
-            <div class="jumbotron">
-                <h1>Skypass</h1>
-                <h5>Get notifications for your Skyward assignments</h5>
+    <body style="background: whitesmoke">
+        <div class="container">
+
+            <div id="alert" class="alert alert-primary" role="alert" hidden></div>
+            
+            <div id="jumbotron" class="text-center">
+                <img id="logo" src="images/logo.png" height="100" width="100" />
+                <h2>Skypass</h2>
+                <p class="lead">Get notifications for your Skyward assignments</p>
             </div>
             
-            <form>
+            <form action="" method="POST" id="signUp">
                 <div class="form-group">
+                    <label>Email</label>
+                    <input id="email" type="email" class="form-control" name="email" />
+
                     <label>Skyward username</label>
-                    <input type="text" class="form-control" name="username"/>
+                    <input id="username" type="text" class="form-control" name="username" />
     
                     <label>Skyward password</label>
-                    <input type="password" class="form-control" name="password">
+                    <input id="password" type="password" class="form-control" name="password" />
                     <small class="form-text text-muted">Don't worry, your password will be safely encrypted.</small>
                 </div>
-                <button type="submit" class="btn btn-primary">Sign up for emails</button>
+                <button type="submit" class="btn btn-primary">Sign up</button>
             </form>
         </div>
+        <!--Scripts at the end-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
